@@ -10,16 +10,10 @@ const Dog = () => {
 
 const RandomNum = () => {
   const num = Math.random() * 10;
-  let message;
-  if (num > 5) {
-    message = <h2>Big Number!</h2>;
-  } else {
-    message = <h2>Small Number!</h2>;
-  }
   return (
     <div>
       <h1>Your number is {num}</h1>
-      {message}
+      <h2>{num > 5 ? "Big" : "Small"} Number </h2>
     </div>
   );
 };
