@@ -8,4 +8,9 @@ const Dog = () => {
   );
 };
 
-ReactDOM.render(<Dog />, document.getElementById("root"));
+const RandomNum = () => {
+  const num = Math.random() * 10;
+  return <h1>Your number is {num}</h1>;
+};
+
+ReactDOM.render(<RandomNum />, document.getElementById("root"));
