@@ -18,4 +18,14 @@ const RandomNum = () => {
   );
 };
 
-ReactDOM.render(<RandomNum />, document.getElementById("root"));
+const App = () => {
+  return (
+    <div>
+      <RandomNum />
+      <Dog />
+      <RandomNum />
+    </div>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById("root"));
