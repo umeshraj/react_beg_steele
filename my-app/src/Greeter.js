@@ -1,6 +1,6 @@
 import React from "react";
 
-function Greeter({ name, age }) {
+function Greeter({ name, age = 18 }) {
   return (
     <>
       <h1>Hi there, {name}</h1>
