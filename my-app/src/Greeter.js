@@ -1,6 +1,10 @@
 import React from "react";
 
 function Greeter({ name, excitement = 1, age = 18 }) {
+  const greet = () => {
+    alert(`Hello there, ${name}`);
+  };
+
   return (
     <>
       <h1>
@@ -8,13 +12,7 @@ function Greeter({ name, excitement = 1, age = 18 }) {
         {"!".repeat(excitement)}
       </h1>
       <p>You are {age} years old</p>
-      <button
-        onClick={() => {
-          alert("Hello");
-        }}
-      >
-        Click Me
-      </button>
+      <button onClick={greet}>Click Me</button>
     </>
   );
 }
