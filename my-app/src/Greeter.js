@@ -8,6 +8,13 @@ function Greeter({ name, excitement = 1, age = 18 }) {
         {"!".repeat(excitement)}
       </h1>
       <p>You are {age} years old</p>
+      <button
+        onClick={() => {
+          alert("Hello");
+        }}
+      >
+        Click Me
+      </button>
     </>
   );
 }
