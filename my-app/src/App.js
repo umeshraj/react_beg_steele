@@ -7,7 +7,9 @@ import Counter from "./Counter";
 function App() {
   return (
     <div>
+      <Counter step={5} />
       <Counter />
+
       <Navbar />
       <Greeter name="Karen" age="27" excitement={4} />
       <Greeter name="Tammy" excitement={2} />
