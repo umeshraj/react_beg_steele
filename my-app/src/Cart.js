@@ -20,7 +20,7 @@ function Cart({ initialItems }) {
       <h1>I AM CART</h1>
       <div className="Cart-items">
         {items.map((item) => (
-          <CartItem key={item.id} {...item} />
+          <CartItem key={item.id} updateQty={updateQty} {...item} />
         ))}
       </div>
       <h2>Grand Total: ${grandTotal}</h2>
