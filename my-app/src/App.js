@@ -7,9 +7,9 @@ import MoodToggler from "./MoodToggler";
 import Cart from "./Cart";
 
 const items = [
-  { id: 1, name: "Tacos", price: 2.25, qty: 2 },
-  { id: 2, name: "Avocado ", price: 1.99, qty: 5 },
-  { id: 3, name: "Sour Cream", price: 3.5, qty: 1 },
+  { id: 1, name: "Tacos", price: 2, qty: 2 },
+  { id: 2, name: "Avocado ", price: 1.0, qty: 5 },
+  { id: 3, name: "Sour Cream", price: 3, qty: 1 },
 ];
 
 function App() {
