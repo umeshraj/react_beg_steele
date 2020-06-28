@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CartItem from "./CartItem";
 import "./Cart.css";
 
 function Cart({ initialItems }) {
   const [items, setItems] = useState(initialItems);
+  const [count, setCount] = useState(1);
+
+  useEffect(() => {
+    console.log("Hello from your effect");
+  }, [items]);
+
   const updateQty = (id, newQty) => {
     const newItems = items.map((item) => {
       if (item.id === id) {
@@ -18,6 +24,13 @@ function Cart({ initialItems }) {
     .toFixed(2);
   return (
     <div className="Cart">
+      <button
+        onClick={() => {
+          setCount(count + 1);
+        }}
+      >
+        {count}
+      </button>
       <h1 className="Cart-title">SHOPPING CART</h1>
       <div className="Cart-items">
         {items.map((item) => (
