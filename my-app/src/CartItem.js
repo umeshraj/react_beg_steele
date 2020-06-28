@@ -1,9 +1,6 @@
 import React from "react";
 
 function CartItem({ id, name, price, qty }) {
-  const addOne = () => {
-    qty += 1;
-  };
   return (
     <div className="CartItem">
       <div>{name}</div>
@@ -11,7 +8,7 @@ function CartItem({ id, name, price, qty }) {
       <div>
         <button>-</button>
         {qty}
-        <button onClick={addOne}>+</button>
+        <button>+</button>
       </div>
 
       <div>Total: ${qty * price}</div>

@@ -3,6 +3,15 @@ import CartItem from "./CartItem";
 
 function Cart({ initialItems }) {
   const [items, setItems] = useState(initialItems);
+  const updateQty = (id, newQty) => {
+    const newItems = items.map((item) => {
+      if (item.id === id) {
+        return { ...item, qty: newQty };
+      }
+      return item;
+    });
+    setItems(newItems);
+  };
   const grandTotal = items
     .reduce((total, item) => total + item.qty * item.price, 0)
     .toFixed(2);
