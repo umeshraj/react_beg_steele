@@ -7,7 +7,8 @@ function Cart({ initialItems }) {
   const [count, setCount] = useState(1);
 
   useEffect(() => {
-    console.log("Hello from your effect");
+    // console.log("Hello from your effect");
+    window.localStorage.setItem("items", JSON.stringify(items));
   }, [items]);
 
   const updateQty = (id, newQty) => {
