@@ -3,7 +3,10 @@ import CartItem from "./CartItem";
 import "./Cart.css";
 
 function Cart({ initialItems }) {
-  const [items, setItems] = useState(initialItems);
+  // load from local storage
+  const initialState = JSON.parse(window.localStorage.getItem("items"));
+
+  const [items, setItems] = useState(initialState || initialItems);
   const [count, setCount] = useState(1);
 
   useEffect(() => {
